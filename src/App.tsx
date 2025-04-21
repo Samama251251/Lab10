@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-
 import GuestForm from './components/GuestForm'
 import GuestList from './components/GuestList'
+import './App.css'
 interface Guest {
   id: number
   name: string
@@ -9,6 +9,7 @@ interface Guest {
   rsvp: boolean 
 }
 const STORAGE_KEY = 'event-planner-guests'
+
 function App() {
   const [guests, setGuests] = useState<Guest[]>(() => {
     const storedGuests = localStorage.getItem(STORAGE_KEY)
